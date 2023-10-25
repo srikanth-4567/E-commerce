@@ -1,0 +1,8 @@
+<!-- provides safe url to user -->
+{% autoescape off % }
+Hi {{user.username}}
+Please click This link below to verify your account 
+http://{{ domain }}{% url 'activate' uidb64=uid token=token %}
+{% endautoescape % }
+
+<!-- activate path is must in urls.py -->
